@@ -29,7 +29,7 @@ function generate(){
   for(i=1;i<=rows;i++){
     for(j=1;j<=lineBreakInterval;j++){
       if(newLetters.length >= 1){
-        let rand = Math.floor(Math.random()*newLetters.length)
+        let rand = Math.floor(Math.random()*letterAmount)
         payload += newLetters[rand]
         newLetters.splice(rand, 1)
       }
@@ -44,5 +44,4 @@ function submit(){
   if(!(getElementContent("playerguess") == correctLetter)) return
   let time = (Date.now() - started)/1000
   setElementHTML("lasttime", time.toFixed(3))
-
 }
