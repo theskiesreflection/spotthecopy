@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <title>Spot the Copy</title>
+    
+    <!-- stylesheet import -->
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="main.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    Amount of unique letters, maximum 25: <input type="number" id="uniquechar"><br>
+    Line break every <input type="number" id="linebreak"> letters, minimum 2<br>
+    Letters:<br>
+    <span id="payload" style="font-family: monospace;">
+    </span><br>
+    Enter the duplicate letter below.<br>
+    <input type="text" id="playerguess"><button onclick="submit()">Submit your guess</button><br>
+    <button onclick="generate()">
+      Generate a new set of letters
+    </button><br>
+    The last search took <span id="lasttime">unknown</span> seconds<br>
+  </body>
+</html>
