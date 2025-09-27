@@ -41,8 +41,8 @@ function generate(){
   started = Date.now()
 }
 function submit(){
-  document.getElementById("playerguess").value = ""
   if(!(getElementContent("playerguess") == correctLetter)) return
   let time = (Date.now() - started)/1000
   setElementHTML("lasttime", time.toFixed(3))
+  document.getElementById("playerguess").value = ""
 }
