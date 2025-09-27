@@ -13,8 +13,8 @@ function generate(){
                "q", "r", "s", "t", "u", "v", "w", "x", "y"]
   let letterAmount = getElementContent("uniquechar")
   let lineBreakInterval = getElementContent("linebreak")
-  let duplicate = Math.ceil(Math.random()*(letterAmount))
-  correctLetter = letters[duplicate-1]
+  let duplicate = Math.floor(Math.random()*(letterAmount))
+  correctLetter = letters[duplicate]
   let newLetters = ["", "", "", "", "","", "", "", "", "",
     "", "", "", "", "","", "", "", "", "",
     "", "", "", "", ""
@@ -22,7 +22,7 @@ function generate(){
   for(i=0;i<letterAmount-1;i++){
     newLetters[i] = letters[i]
   }
-  newLetters[letterAmount-1] = letters[duplicate-1]
+  newLetters[letterAmount-1] = letters[duplicate]
   newLetters = newLetters.filter(function(a){return a !== ""})
   console.log(newLetters)
   let rows = Math.ceil(letterAmount/lineBreakInterval)
@@ -46,6 +46,7 @@ function submit(){
   let time = (Date.now() - started)/1000
   setElementHTML("lasttime", time.toFixed(3))
 }
+
 
 
 
