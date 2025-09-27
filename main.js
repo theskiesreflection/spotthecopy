@@ -13,7 +13,7 @@ function generate(){
                "q", "r", "s", "t", "u", "v", "w", "x", "y"]
   let letterAmount = getElementContent("uniquechar")
   let lineBreakInterval = getElementContent("linebreak")
-  let duplicate = Math.ceil(Math.random()*(letterAmount-1))
+  let duplicate = Math.ceil(Math.random()*(letterAmount))
   correctLetter = letters[duplicate-1]
   let newLetters = ["", "", "", "", "","", "", "", "", "",
     "", "", "", "", "","", "", "", "", "",
@@ -46,6 +46,7 @@ function submit(){
   let time = (Date.now() - started)/1000
   setElementHTML("lasttime", time.toFixed(3))
 }
+
 
 
 
