@@ -40,8 +40,9 @@ function generate(){
   started = Date.now()
 }
 function submit(){
-  document.getElementById("playerguess") = ""
+  document.getElementById("playerguess").value = ""
   if(!(getElementContent("playerguess") == correctLetter)) return
   let time = (Date.now() - started)/1000
   setElementHTML("lasttime", time.toFixed(3))
+
 }
