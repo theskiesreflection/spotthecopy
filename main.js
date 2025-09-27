@@ -30,7 +30,7 @@ function generate(){
   for(i=1;i<=rows;i++){
     for(j=1;j<=lineBreakInterval;j++){
       if(newLetters.length >= 1){
-        let rand = Math.floor(Math.random()*letterAmount)
+        let rand = Math.floor(Math.random()*(newLetters.length-1))
         payload += newLetters[rand]
         newLetters.splice(rand, 1)
       }
@@ -46,4 +46,3 @@ function submit(){
   let time = (Date.now() - started)/1000
   setElementHTML("lasttime", time.toFixed(3))
 }
-
